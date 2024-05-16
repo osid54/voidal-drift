@@ -1,0 +1,74 @@
+[gd_scene load_steps=11 format=3 uid="uid://dx70uo64ddhj5"]
+
+[ext_resource type="Texture2D" uid="uid://b6va4lrlrskel" path="res://src/sprites/dude.png" id="1_cafrq"]
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_omfc4"]
+[ext_resource type="Shader" path="res://shaders/float.gdshader" id="2_du7nw"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gud3q"]
+shader = ExtResource("2_du7nw")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l3fi1"]
+atlas = ExtResource("1_cafrq")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_drdbt"]
+atlas = ExtResource("1_cafrq")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5qlnw"]
+atlas = ExtResource("1_cafrq")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_26ed4"]
+atlas = ExtResource("1_cafrq")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_33qtw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l3fi1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_drdbt")
+}],
+"loop": true,
+"name": &"back",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5qlnw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_26ed4")
+}],
+"loop": true,
+"name": &"front",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e5hwn"]
+radius = 12.0
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_omfc4")
+accel = 30
+friction = 10
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+material = SubResource("ShaderMaterial_gud3q")
+sprite_frames = SubResource("SpriteFrames_33qtw")
+animation = &"front"
+autoplay = "front"
+frame_progress = 0.616845
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 13)
+shape = SubResource("CapsuleShape2D_e5hwn")

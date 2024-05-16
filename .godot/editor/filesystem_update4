@@ -1,0 +1,4 @@
+res://assets/actors/player.tscn
+res://scripts/player.gd
+res://scenes/main.tscn
+res://shaders/float.gdshader

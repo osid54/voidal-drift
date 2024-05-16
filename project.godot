@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Voidal Drift"
+config/name="voidal drift"
 config/features=PackedStringArray("4.2", "Forward Plus")
 
 [file_customization]

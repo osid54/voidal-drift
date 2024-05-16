@@ -1,0 +1,123 @@
+[gd_scene load_steps=18 format=3 uid="uid://cdram3xr26yi6"]
+
+[ext_resource type="Texture2D" uid="uid://ca3icj3ojap1h" path="res://src/sprites/ship/floor.PNG" id="1_kt1ju"]
+[ext_resource type="Texture2D" uid="uid://0ql0y1kll4ve" path="res://src/sprites/ship/wallB.PNG" id="2_eyoxp"]
+[ext_resource type="Texture2D" uid="uid://bs6p4sx5abh72" path="res://src/sprites/ship/commRB.PNG" id="3_yccsp"]
+[ext_resource type="Texture2D" uid="uid://dto43tgb0k7g3" path="res://src/sprites/ship/kitCommF.PNG" id="4_b2v4c"]
+[ext_resource type="Texture2D" uid="uid://b7t6wja7liqp5" path="res://src/sprites/ship/commLF.PNG" id="5_g38se"]
+[ext_resource type="Texture2D" uid="uid://dtfeewfh5qpwd" path="res://src/sprites/ship/commRF.PNG" id="6_g58ge"]
+[ext_resource type="Texture2D" uid="uid://cvj2ovhdm71p0" path="res://src/sprites/ship/bedB.PNG" id="7_cw4fm"]
+[ext_resource type="Texture2D" uid="uid://c6i3ipi1w110k" path="res://src/sprites/ship/bedF.PNG" id="8_2e5wm"]
+[ext_resource type="Texture2D" uid="uid://cl8aakaewvwcr" path="res://src/sprites/ship/engLF.PNG" id="9_6k2ro"]
+[ext_resource type="Texture2D" uid="uid://e28vc78eykj5" path="res://src/sprites/ship/engRB.PNG" id="10_hgf2q"]
+[ext_resource type="Texture2D" uid="uid://dgags3rnagsm0" path="res://src/sprites/ship/engRF.PNG" id="11_n8ivr"]
+[ext_resource type="Texture2D" uid="uid://cicodjiqtpfid" path="res://src/sprites/ship/farmDB.PNG" id="12_d3vsn"]
+[ext_resource type="Texture2D" uid="uid://vayjlwdqfgdp" path="res://src/sprites/ship/farmDF.PNG" id="13_i2o6j"]
+[ext_resource type="Texture2D" uid="uid://bwirp5ubrejnu" path="res://src/sprites/ship/farmF.PNG" id="14_bvpfj"]
+[ext_resource type="Texture2D" uid="uid://djt80rh5xe1pu" path="res://src/sprites/ship/kitF.PNG" id="15_q3bnr"]
+[ext_resource type="Texture2D" uid="uid://cltwhidn0vxm6" path="res://src/sprites/ship/pitF.PNG" id="16_q1n0t"]
+[ext_resource type="Texture2D" uid="uid://cruxkeixop1l6" path="res://src/sprites/ship/storF.PNG" id="17_yyqxo"]
+
+[node name="ship" type="Node2D"]
+
+[node name="Floor" type="Sprite2D" parent="."]
+position = Vector2(150, 49)
+texture = ExtResource("1_kt1ju")
+region_enabled = true
+region_rect = Rect2(355.04, 400.673, 3425.34, 1454.43)
+
+[node name="WallB" type="Sprite2D" parent="."]
+position = Vector2(138, -81)
+texture = ExtResource("2_eyoxp")
+region_enabled = true
+region_rect = Rect2(347.135, 293.927, 3421.55, 1412.67)
+
+[node name="CommRb" type="Sprite2D" parent="."]
+position = Vector2(1146, 269)
+texture = ExtResource("3_yccsp")
+region_enabled = true
+region_rect = Rect2(2725.07, 1241.39, 683.55, 208.862)
+
+[node name="KitCommF" type="Sprite2D" parent="."]
+position = Vector2(928, -299)
+texture = ExtResource("4_b2v4c")
+region_enabled = true
+region_rect = Rect2(2687.1, 629.997, 311.395, 307.598)
+
+[node name="CommLf" type="Sprite2D" parent="."]
+position = Vector2(1147, -263)
+texture = ExtResource("5_g38se")
+region_enabled = true
+region_rect = Rect2(2722.68, 707.955, 687.348, 216.454)
+
+[node name="PitF" type="Sprite2D" parent="."]
+position = Vector2(1632, 148)
+texture = ExtResource("16_q1n0t")
+region_enabled = true
+region_rect = Rect2(3317.48, 1005.95, 467.093, 444.307)
+
+[node name="CommRf" type="Sprite2D" parent="."]
+position = Vector2(1148, 332)
+texture = ExtResource("6_g58ge")
+region_enabled = true
+region_rect = Rect2(2721.27, 1237.6, 687.348, 345.573)
+
+[node name="BedB" type="Sprite2D" parent="."]
+position = Vector2(538, 319)
+texture = ExtResource("7_cw4fm")
+region_enabled = true
+region_rect = Rect2(2117.47, 1252.79, 672.157, 288.61)
+
+[node name="BedF" type="Sprite2D" parent="."]
+position = Vector2(603, 429)
+texture = ExtResource("8_2e5wm")
+region_enabled = true
+region_rect = Rect2(2113.67, 1317.34, 812.665, 383.547)
+
+[node name="EngLf" type="Sprite2D" parent="."]
+position = Vector2(11, -381)
+texture = ExtResource("9_6k2ro")
+region_enabled = true
+region_rect = Rect2(1654.18, 588.224, 554.435, 220.255)
+
+[node name="FarmDb" type="Sprite2D" parent="."]
+position = Vector2(-999, -153)
+texture = ExtResource("12_d3vsn")
+region_enabled = true
+region_rect = Rect2(869.358, 681.262, 108.862, 478.485)
+
+[node name="FarmDf" type="Sprite2D" parent="."]
+position = Vector2(-1005, 159)
+texture = ExtResource("13_i2o6j")
+region_enabled = true
+region_rect = Rect2(859.231, 1012.91, 121.52, 475.953)
+
+[node name="KitF" type="Sprite2D" parent="."]
+position = Vector2(541, -314)
+texture = ExtResource("15_q3bnr")
+region_enabled = true
+region_rect = Rect2(2130.13, 628.097, 663.296, 275.952)
+
+[node name="StorF" type="Sprite2D" parent="."]
+position = Vector2(-592, 356)
+texture = ExtResource("17_yyqxo")
+region_enabled = true
+region_rect = Rect2(930.118, 1309.12, 800.007, 253.167)
+
+[node name="EngRb" type="Sprite2D" parent="."]
+position = Vector2(13, 382)
+texture = ExtResource("10_hgf2q")
+region_enabled = true
+region_rect = Rect2(1679.76, 1370.51, 511.397, 178.834)
+
+[node name="EngRf" type="Sprite2D" parent="."]
+position = Vector2(20, 547)
+texture = ExtResource("11_n8ivr")
+region_enabled = true
+region_rect = Rect2(1676.96, 1395.19, 516.46, 445.573)
+
+[node name="FarmF" type="Sprite2D" parent="."]
+position = Vector2(-1244, 164)
+texture = ExtResource("14_bvpfj")
+region_enabled = true
+region_rect = Rect2(352.898, 967.34, 632.917, 544.308)

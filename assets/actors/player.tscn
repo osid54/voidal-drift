@@ -56,7 +56,7 @@ animations = [{
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e5hwn"]
 radius = 12.0
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[node name="player" type="CharacterBody2D"]
 motion_mode = 1
 script = ExtResource("1_omfc4")
 accel = 30
@@ -67,7 +67,7 @@ material = SubResource("ShaderMaterial_gud3q")
 sprite_frames = SubResource("SpriteFrames_33qtw")
 animation = &"front"
 autoplay = "front"
-frame_progress = 0.616845
+frame_progress = 0.785876
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 13)

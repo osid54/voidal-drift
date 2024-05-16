@@ -67,7 +67,7 @@ material = SubResource("ShaderMaterial_gud3q")
 sprite_frames = SubResource("SpriteFrames_33qtw")
 animation = &"front"
 autoplay = "front"
-frame_progress = 0.785876
+frame_progress = 0.307148
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 13)

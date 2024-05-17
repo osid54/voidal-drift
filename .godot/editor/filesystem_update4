@@ -1,5 +1,6 @@
-res://assets/actors/player.tscn
-res://scripts/player.gd
-res://scenes/main.tscn
+res://assets/env/door.tscn
 res://shaders/float.gdshader
+res://scripts/door.gd
+res://scenes/main.tscn
+res://assets/characters/player.tscn
 res://assets/env/ship.tscn

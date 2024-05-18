@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dx70uo64ddhj5"]
+[gd_scene load_steps=12 format=3 uid="uid://dx70uo64ddhj5"]
 
 [ext_resource type="Texture2D" uid="uid://b6va4lrlrskel" path="res://src/sprites/dude.png" id="1_cafrq"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_omfc4"]
@@ -56,6 +56,9 @@ animations = [{
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e5hwn"]
 radius = 12.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_byh6t"]
+size = Vector2(50, 50)
+
 [node name="player" type="CharacterBody2D"]
 y_sort_enabled = true
 collision_layer = 8
@@ -74,3 +77,9 @@ frame_progress = 0.307148
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 13)
 shape = SubResource("CapsuleShape2D_e5hwn")
+
+[node name="interactBox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interactBox"]
+position = Vector2(40, 13)
+shape = SubResource("RectangleShape2D_byh6t")

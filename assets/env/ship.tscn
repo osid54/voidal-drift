@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://cdram3xr26yi6"]
+[gd_scene load_steps=34 format=3 uid="uid://cdram3xr26yi6"]
 
 [ext_resource type="Texture2D" uid="uid://ca3icj3ojap1h" path="res://src/sprites/ship/floor.PNG" id="1_kt1ju"]
 [ext_resource type="Texture2D" uid="uid://0ql0y1kll4ve" path="res://src/sprites/ship/wallB.PNG" id="2_eyoxp"]
@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://cltwhidn0vxm6" path="res://src/sprites/ship/pitF.PNG" id="16_q1n0t"]
 [ext_resource type="Texture2D" uid="uid://cruxkeixop1l6" path="res://src/sprites/ship/storF.PNG" id="17_yyqxo"]
 [ext_resource type="PackedScene" uid="uid://dii3g1b6u1ao5" path="res://assets/env/door.tscn" id="18_o2tv6"]
+[ext_resource type="PackedScene" uid="uid://dx70uo64ddhj5" path="res://assets/characters/player.tscn" id="19_lnqpy"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_sxhnd"]
 a = Vector2(60, -332)
@@ -77,20 +78,21 @@ b = Vector2(-1502, 240)
 
 [node name="ship" type="Node2D"]
 
-[node name="sprites" type="Node2D" parent="."]
-
-[node name="Floor" type="Sprite2D" parent="sprites"]
+[node name="Floor" type="Sprite2D" parent="."]
 z_index = -3
 position = Vector2(150, 49)
 texture = ExtResource("1_kt1ju")
 region_enabled = true
 region_rect = Rect2(355.04, 400.673, 3425.34, 1454.43)
 
-[node name="WallB" type="Sprite2D" parent="sprites"]
+[node name="WallB" type="Sprite2D" parent="."]
 position = Vector2(138, -81)
 texture = ExtResource("2_eyoxp")
 region_enabled = true
 region_rect = Rect2(347.135, 293.927, 3421.55, 1412.67)
+
+[node name="sprites" type="Node2D" parent="."]
+y_sort_enabled = true
 
 [node name="CommRb" type="Sprite2D" parent="sprites"]
 position = Vector2(1146, 269)
@@ -181,6 +183,12 @@ position = Vector2(-1244, 164)
 texture = ExtResource("14_bvpfj")
 region_enabled = true
 region_rect = Rect2(352.898, 967.34, 632.917, 544.308)
+
+[node name="player" parent="sprites" instance=ExtResource("19_lnqpy")]
+
+[node name="Camera2D" type="Camera2D" parent="sprites/player"]
+position_smoothing_enabled = true
+editor_draw_drag_margin = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 visible = false

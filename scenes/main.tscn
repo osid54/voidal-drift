@@ -1,15 +1,369 @@
-[gd_scene load_steps=3 format=3 uid="uid://c6so4o2w5ij8"]
+[gd_scene load_steps=38 format=3 uid="uid://c6so4o2w5ij8"]
 
-[ext_resource type="PackedScene" uid="uid://cdram3xr26yi6" path="res://assets/env/ship.tscn" id="1_mj8mn"]
+[ext_resource type="Texture2D" uid="uid://ca3icj3ojap1h" path="res://src/sprites/ship/floor.PNG" id="1_v6o1k"]
+[ext_resource type="Texture2D" uid="uid://0ql0y1kll4ve" path="res://src/sprites/ship/wallB.PNG" id="2_knc4f"]
 [ext_resource type="PackedScene" uid="uid://dx70uo64ddhj5" path="res://assets/characters/player.tscn" id="2_pcajm"]
+[ext_resource type="Texture2D" uid="uid://bs6p4sx5abh72" path="res://src/sprites/ship/commRB.PNG" id="3_3rlpy"]
+[ext_resource type="PackedScene" uid="uid://b2nw5d6pn5wvv" path="res://assets/objects/cryoMachine.tscn" id="3_fgpbo"]
+[ext_resource type="Texture2D" uid="uid://dto43tgb0k7g3" path="res://src/sprites/ship/kitCommF.PNG" id="4_dlo2u"]
+[ext_resource type="Texture2D" uid="uid://b7t6wja7liqp5" path="res://src/sprites/ship/commLF.PNG" id="5_rc4o2"]
+[ext_resource type="Texture2D" uid="uid://cltwhidn0vxm6" path="res://src/sprites/ship/pitF.PNG" id="6_digpy"]
+[ext_resource type="Texture2D" uid="uid://dtfeewfh5qpwd" path="res://src/sprites/ship/commRF.PNG" id="7_ctejg"]
+[ext_resource type="Texture2D" uid="uid://cvj2ovhdm71p0" path="res://src/sprites/ship/bedB.PNG" id="8_0s45n"]
+[ext_resource type="Texture2D" uid="uid://c6i3ipi1w110k" path="res://src/sprites/ship/bedF.PNG" id="9_8t87c"]
+[ext_resource type="Texture2D" uid="uid://cl8aakaewvwcr" path="res://src/sprites/ship/engLF.PNG" id="10_fsodx"]
+[ext_resource type="Texture2D" uid="uid://cicodjiqtpfid" path="res://src/sprites/ship/farmDB.PNG" id="11_uovpu"]
+[ext_resource type="Texture2D" uid="uid://vayjlwdqfgdp" path="res://src/sprites/ship/farmDF.PNG" id="12_wrb82"]
+[ext_resource type="Texture2D" uid="uid://djt80rh5xe1pu" path="res://src/sprites/ship/kitF.PNG" id="13_i28h0"]
+[ext_resource type="Texture2D" uid="uid://cruxkeixop1l6" path="res://src/sprites/ship/storF.PNG" id="14_8ffyr"]
+[ext_resource type="Texture2D" uid="uid://e28vc78eykj5" path="res://src/sprites/ship/engRB.PNG" id="15_s8crk"]
+[ext_resource type="Texture2D" uid="uid://dgags3rnagsm0" path="res://src/sprites/ship/engRF.PNG" id="16_k6c0k"]
+[ext_resource type="Texture2D" uid="uid://bwirp5ubrejnu" path="res://src/sprites/ship/farmF.PNG" id="17_y5fxa"]
+[ext_resource type="PackedScene" uid="uid://dii3g1b6u1ao5" path="res://assets/env/door.tscn" id="18_guunr"]
+[ext_resource type="PackedScene" uid="uid://c8owvlnwcik72" path="res://assets/objects/crate.tscn" id="21_5baw6"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_rr25g"]
+a = Vector2(60, -332)
+b = Vector2(-218, -348)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_4ltir"]
+a = Vector2(142, -330)
+b = Vector2(-146, -344)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_nacxk"]
+a = Vector2(705, -272)
+b = Vector2(844, -209)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_q8hv1"]
+a = Vector2(705, -272)
+b = Vector2(493, -308)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_uogvi"]
+a = Vector2(1144, -223)
+b = Vector2(845, -208)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_n4cpq"]
+a = Vector2(1216, -224)
+b = Vector2(1450, -233)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_ag04k"]
+a = Vector2(1443, 334)
+b = Vector2(1445, 58)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_g1nlu"]
+a = Vector2(1446, -18)
+b = Vector2(1452, -234)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_2tn8m"]
+a = Vector2(-418, 310)
+b = Vector2(-989, 291)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_evn58"]
+a = Vector2(-203, 365)
+b = Vector2(-418, 308)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_chwaf"]
+a = Vector2(849, 315)
+b = Vector2(962, 368)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_j7ptg"]
+a = Vector2(837, -211)
+b = Vector2(983, -282)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_tqd7c"]
+a = Vector2(-985, 327)
+b = Vector2(-1358, 327)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_0bdec"]
+a = Vector2(-1359, 327)
+b = Vector2(-1502, 240)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_npfmk"]
+a = Vector2(243, -324)
+b = Vector2(244, -499)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_dsugd"]
+a = Vector2(245, 595)
+b = Vector2(242, 422)
 
 [node name="Node2D" type="Node2D"]
+
+[node name="Floor" type="Sprite2D" parent="."]
+z_index = -3
+position = Vector2(150, 49)
+texture = ExtResource("1_v6o1k")
+region_enabled = true
+region_rect = Rect2(355.04, 400.673, 3425.34, 1454.43)
+
+[node name="WallB" type="Sprite2D" parent="."]
+position = Vector2(138, -81)
+texture = ExtResource("2_knc4f")
+region_enabled = true
+region_rect = Rect2(347.135, 293.927, 3421.55, 1412.67)
+
+[node name="walls" type="StaticBody2D" parent="."]
+visible = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="walls"]
+position = Vector2(945, -303)
+build_mode = 1
+polygon = PackedVector2Array(-1055, -325, -975, -323, -881, -290, -779, -237, -701, -191, -248, -187, -173, -120, -116, -56, -44, -5, 39, 21, 263, -59, 507, 67, 670, 74, 746, 117, 812, 179, 865, 266, 874, 355, 866, 437, 828, 515, 761, 580, 687, 622, 504, 636, 258, 772, 16, 672, -114, 763, -230, 889, -698, 899, -805, 972, -941, 1026, -1053, 1044, -1067, 884, -1164, 747, -1274, 697, -1437, 677, -1903, 676, -1925, 709, -2281, 716, -2370, 681, -2435, 617, -2482, 319, -2439, 112, -2376, 41, -2288, -5, -1932, -11, -1924, 31, -1575, 36, -1352, 25, -1252, 3, -1165, -42, -1111, -93, -1067, -185)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="walls"]
+shape = SubResource("SegmentShape2D_rr25g")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="walls"]
+position = Vector2(279, 18)
+shape = SubResource("SegmentShape2D_4ltir")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="walls"]
+shape = SubResource("SegmentShape2D_nacxk")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="walls"]
+shape = SubResource("SegmentShape2D_q8hv1")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="walls"]
+shape = SubResource("SegmentShape2D_uogvi")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="walls"]
+shape = SubResource("SegmentShape2D_n4cpq")
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="walls"]
+shape = SubResource("SegmentShape2D_ag04k")
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="walls"]
+shape = SubResource("SegmentShape2D_g1nlu")
+
+[node name="CollisionShape2D21" type="CollisionShape2D" parent="walls"]
+shape = SubResource("SegmentShape2D_2tn8m")
+
+[node name="CollisionShape2D22" type="CollisionShape2D" parent="walls"]
+shape = SubResource("SegmentShape2D_evn58")
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="walls"]
+polygon = PackedVector2Array(-216, 361, -217, 447, 58, 436, 60, 350)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="walls"]
+polygon = PackedVector2Array(130, 431, 130, 339, 420, 329, 422, 417)
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="walls"]
+polygon = PackedVector2Array(586, 397, 495, 409, 492, 320, 582, 312, 839, 231, 1141, 241, 1144, 333, 841, 316)
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="walls"]
+polygon = PackedVector2Array(1211, 330, 1208, 243, 1443, 249, 1445, 334)
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="walls"]
+shape = SubResource("SegmentShape2D_chwaf")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="walls"]
+shape = SubResource("SegmentShape2D_j7ptg")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="walls"]
+shape = SubResource("SegmentShape2D_tqd7c")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="walls"]
+shape = SubResource("SegmentShape2D_0bdec")
+
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="walls"]
+polygon = PackedVector2Array(-967, 274, -1000, 210, -1017, 139, -1025, 47, -1042, 47, -1038, 148, -1011, 285, -969, 399)
+
+[node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="walls"]
+polygon = PackedVector2Array(-975, -378, -972, -268, -1011, -144, -1022, -50, -1040, -49, -1035, -163, -1023, -258)
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="walls"]
+shape = SubResource("SegmentShape2D_npfmk")
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="walls"]
+shape = SubResource("SegmentShape2D_dsugd")
+
+[node name="ySort" type="Node2D" parent="."]
 y_sort_enabled = true
 
-[node name="ship" parent="." instance=ExtResource("1_mj8mn")]
+[node name="player" parent="ySort" instance=ExtResource("2_pcajm")]
 
-[node name="player" parent="." instance=ExtResource("2_pcajm")]
-
-[node name="Camera2D" type="Camera2D" parent="player"]
+[node name="Camera2D" type="Camera2D" parent="ySort/player"]
 position_smoothing_enabled = true
 editor_draw_drag_margin = true
+
+[node name="CommRb" type="Sprite2D" parent="ySort"]
+position = Vector2(1146, 269)
+texture = ExtResource("3_3rlpy")
+region_enabled = true
+region_rect = Rect2(2725.07, 1241.39, 683.55, 208.862)
+
+[node name="KitCommF" type="Sprite2D" parent="ySort"]
+position = Vector2(928, -299)
+texture = ExtResource("4_dlo2u")
+region_enabled = true
+region_rect = Rect2(2687.1, 629.997, 311.395, 307.598)
+
+[node name="CommLf" type="Sprite2D" parent="ySort"]
+position = Vector2(1147, -263)
+texture = ExtResource("5_rc4o2")
+region_enabled = true
+region_rect = Rect2(2722.68, 707.955, 687.348, 216.454)
+
+[node name="PitF" type="Sprite2D" parent="ySort"]
+position = Vector2(1628, 293)
+texture = ExtResource("6_digpy")
+offset = Vector2(0, -142.645)
+region_enabled = true
+region_rect = Rect2(3317.48, 1005.95, 467.093, 444.307)
+
+[node name="CommRf" type="Sprite2D" parent="ySort"]
+position = Vector2(1148, 332)
+texture = ExtResource("7_ctejg")
+region_enabled = true
+region_rect = Rect2(2721.27, 1237.6, 687.348, 345.573)
+
+[node name="BedB" type="Sprite2D" parent="ySort"]
+position = Vector2(539, 363)
+texture = ExtResource("8_0s45n")
+offset = Vector2(0, -43.155)
+region_enabled = true
+region_rect = Rect2(2117.47, 1252.79, 672.157, 288.61)
+
+[node name="BedF" type="Sprite2D" parent="ySort"]
+position = Vector2(603, 429)
+texture = ExtResource("9_8t87c")
+region_enabled = true
+region_rect = Rect2(2113.67, 1317.34, 812.665, 383.547)
+
+[node name="EngLf" type="Sprite2D" parent="ySort"]
+position = Vector2(11, -381)
+texture = ExtResource("10_fsodx")
+region_enabled = true
+region_rect = Rect2(1654.18, 588.224, 554.435, 220.255)
+
+[node name="FarmDb" type="Sprite2D" parent="ySort"]
+position = Vector2(-999, -153)
+texture = ExtResource("11_uovpu")
+region_enabled = true
+region_rect = Rect2(869.358, 681.262, 108.862, 478.485)
+
+[node name="FarmDf" type="Sprite2D" parent="ySort"]
+position = Vector2(-1005, 159)
+texture = ExtResource("12_wrb82")
+region_enabled = true
+region_rect = Rect2(859.231, 1012.91, 121.52, 475.953)
+
+[node name="KitF" type="Sprite2D" parent="ySort"]
+position = Vector2(542, -333)
+texture = ExtResource("13_i28h0")
+offset = Vector2(0, 19.77)
+region_enabled = true
+region_rect = Rect2(2130.13, 628.097, 663.296, 275.952)
+
+[node name="StorF" type="Sprite2D" parent="ySort"]
+position = Vector2(-592, 356)
+texture = ExtResource("14_8ffyr")
+region_enabled = true
+region_rect = Rect2(930.118, 1309.12, 800.007, 253.167)
+
+[node name="EngRb" type="Sprite2D" parent="ySort"]
+position = Vector2(13, 382)
+texture = ExtResource("15_s8crk")
+region_enabled = true
+region_rect = Rect2(1679.76, 1370.51, 511.397, 178.834)
+
+[node name="EngRf" type="Sprite2D" parent="ySort"]
+position = Vector2(20, 547)
+texture = ExtResource("16_k6c0k")
+region_enabled = true
+region_rect = Rect2(1676.96, 1395.19, 516.46, 445.573)
+
+[node name="FarmF" type="Sprite2D" parent="ySort"]
+position = Vector2(-1244, 164)
+texture = ExtResource("17_y5fxa")
+region_enabled = true
+region_rect = Rect2(352.898, 967.34, 632.917, 544.308)
+
+[node name="engL" parent="ySort" node_paths=PackedStringArray("wall") instance=ExtResource("18_guunr")]
+position = Vector2(97, -351)
+wall = NodePath("../EngLf")
+
+[node name="kit" parent="ySort" node_paths=PackedStringArray("wall", "wall2", "wall3") instance=ExtResource("18_guunr")]
+position = Vector2(457, -333)
+wall = NodePath("../KitF")
+wall2 = NodePath("../KitCommF")
+wall3 = NodePath("../CommLf")
+
+[node name="commL" parent="ySort" node_paths=PackedStringArray("wall") instance=ExtResource("18_guunr")]
+position = Vector2(1180, -245)
+wall = NodePath("../CommLf")
+
+[node name="commR" parent="ySort" node_paths=PackedStringArray("wall", "wall2") instance=ExtResource("18_guunr")]
+position = Vector2(1177, 303)
+bottom = true
+wall = NodePath("../CommRf")
+wall2 = NodePath("../BedF")
+
+[node name="bed" parent="ySort" node_paths=PackedStringArray("wall") instance=ExtResource("18_guunr")]
+position = Vector2(457, 392)
+bottom = true
+wall = NodePath("../BedF")
+
+[node name="engR" parent="ySort" node_paths=PackedStringArray("wall") instance=ExtResource("18_guunr")]
+position = Vector2(94, 408)
+bottom = true
+wall = NodePath("../EngRf")
+
+[node name="cryoMachine" parent="ySort" instance=ExtResource("3_fgpbo")]
+y_sort_enabled = true
+position = Vector2(941, -219)
+type = 2
+
+[node name="cryoMachine2" parent="ySort" instance=ExtResource("3_fgpbo")]
+position = Vector2(1036, -218)
+type = 2
+
+[node name="cryoMachine3" parent="ySort" instance=ExtResource("3_fgpbo")]
+position = Vector2(1291, -233)
+type = 2
+
+[node name="cryoMachine4" parent="ySort" instance=ExtResource("3_fgpbo")]
+position = Vector2(1389, -230)
+type = 2
+
+[node name="cryoMachine5" parent="ySort" instance=ExtResource("3_fgpbo")]
+y_sort_enabled = true
+position = Vector2(916, 212)
+type = 3
+
+[node name="cryoMachine6" parent="ySort" instance=ExtResource("3_fgpbo")]
+position = Vector2(1011, 213)
+type = 3
+
+[node name="cryoMachine7" parent="ySort" instance=ExtResource("3_fgpbo")]
+position = Vector2(1266, 219)
+type = 3
+
+[node name="cryoMachine8" parent="ySort" instance=ExtResource("3_fgpbo")]
+position = Vector2(1364, 222)
+type = 3
+
+[node name="cryoMachine9" parent="ySort" instance=ExtResource("3_fgpbo")]
+position = Vector2(1506, -231)
+type = 1
+
+[node name="cryoMachine10" parent="ySort" instance=ExtResource("3_fgpbo")]
+position = Vector2(1498, 219)
+type = 3
+
+[node name="crate" parent="ySort" instance=ExtResource("21_5baw6")]
+position = Vector2(256, -122)
+
+[node name="crate2" parent="ySort" instance=ExtResource("21_5baw6")]
+position = Vector2(-137, -142)
+
+[node name="crate3" parent="ySort" instance=ExtResource("21_5baw6")]
+position = Vector2(-128, 178)
+
+[node name="crate4" parent="ySort" instance=ExtResource("21_5baw6")]
+position = Vector2(617, 142)
+
+[node name="crate5" parent="ySort" instance=ExtResource("21_5baw6")]
+position = Vector2(625, -97)
+
+[node name="crate6" parent="ySort" instance=ExtResource("21_5baw6")]
+position = Vector2(248, 183)

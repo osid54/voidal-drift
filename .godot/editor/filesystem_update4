@@ -1,6 +1,10 @@
-res://assets/env/door.tscn
 res://shaders/float.gdshader
-res://scripts/door.gd
+res://scripts/cryoMachine.gd
 res://scenes/main.tscn
 res://assets/characters/player.tscn
 res://assets/env/ship.tscn
+res://assets/env/door.tscn
+res://assets/autoload.tscn
+res://assets/objects/cryoMachine.tscn
+res://assets/objects/crate.tscn
+res://assets/objects/plant.tscn

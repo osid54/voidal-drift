@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8owvlnwcik72"]
+
+[ext_resource type="Texture2D" uid="uid://dv74iqd5gc2yr" path="res://src/sprites/voidSheet.png" id="1_5wusp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kbmi1"]
+size = Vector2(139, 38)
+
+[node name="crate" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -31)
+texture = ExtResource("1_5wusp")
+region_enabled = true
+region_rect = Rect2(0, 180, 144, 144)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 19)
+shape = SubResource("RectangleShape2D_kbmi1")

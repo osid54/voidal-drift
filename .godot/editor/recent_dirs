@@ -1,5 +1,7 @@
-res://src/sprites
+res://assets/objects
 res://scripts
+res://src/sprites
+res://assets
 res://assets/env
 res://shaders
 res://scenes

@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://c5sgqa1v6ibms"]
+
+[ext_resource type="Script" path="res://scripts/planter.gd" id="1_3v3tr"]
+[ext_resource type="Texture2D" uid="uid://dv74iqd5gc2yr" path="res://src/sprites/voidSheet.png" id="1_8g4x8"]
+[ext_resource type="PackedScene" uid="uid://ce0fpsuu80kna" path="res://assets/objects/plant.tscn" id="3_8mdbw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_16a7h"]
+size = Vector2(142, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8ladq"]
+size = Vector2(52, 110)
+
+[node name="planter" type="StaticBody2D"]
+script = ExtResource("1_3v3tr")
+
+[node name="box" type="Sprite2D" parent="."]
+position = Vector2(0, -16)
+texture = ExtResource("1_8g4x8")
+region_enabled = true
+region_rect = Rect2(360, 0, 144, 72)
+
+[node name="hShape" type="CollisionShape2D" parent="."]
+position = Vector2(1, 10)
+shape = SubResource("RectangleShape2D_16a7h")
+
+[node name="vShape" type="CollisionShape2D" parent="."]
+position = Vector2(0, 55)
+shape = SubResource("RectangleShape2D_8ladq")
+disabled = true
+
+[node name="plant1" parent="." instance=ExtResource("3_8mdbw")]
+position = Vector2(-45, -36)
+
+[node name="plant2" parent="." instance=ExtResource("3_8mdbw")]
+position = Vector2(0, -35)
+
+[node name="plant3" parent="." instance=ExtResource("3_8mdbw")]
+position = Vector2(44, -35)

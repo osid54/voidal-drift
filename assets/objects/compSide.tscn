@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dk3j4rykmswqt"]
+
+[ext_resource type="Texture2D" uid="uid://dv74iqd5gc2yr" path="res://src/sprites/voidSheet.png" id="1_08dwr"]
+[ext_resource type="Script" path="res://scripts/compSide.gd" id="1_58kjp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ft5mo"]
+size = Vector2(68, 109)
+
+[node name="compSide" type="StaticBody2D"]
+script = ExtResource("1_58kjp")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 37)
+texture = ExtResource("1_08dwr")
+region_enabled = true
+region_rect = Rect2(288, 180, 72, 144)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 54.5)
+shape = SubResource("RectangleShape2D_ft5mo")

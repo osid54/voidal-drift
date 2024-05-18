@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://cnv128hxdrye4"]
+
+[ext_resource type="Texture2D" uid="uid://dv74iqd5gc2yr" path="res://src/sprites/voidSheet.png" id="1_78q4e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rt8ab"]
+size = Vector2(86.9741, 38.8909)
+
+[node name="compDR" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -2)
+texture = ExtResource("1_78q4e")
+region_enabled = true
+region_rect = Rect2(648, 72, 108, 108)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-8.5, 18)
+rotation = 0.785398
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_rt8ab")

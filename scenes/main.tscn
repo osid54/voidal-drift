@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://c6so4o2w5ij8"]
+[gd_scene load_steps=44 format=3 uid="uid://c6so4o2w5ij8"]
 
 [ext_resource type="Texture2D" uid="uid://ca3icj3ojap1h" path="res://src/sprites/ship/floor.PNG" id="1_v6o1k"]
 [ext_resource type="Texture2D" uid="uid://0ql0y1kll4ve" path="res://src/sprites/ship/wallB.PNG" id="2_knc4f"]
@@ -21,6 +21,12 @@
 [ext_resource type="Texture2D" uid="uid://bwirp5ubrejnu" path="res://src/sprites/ship/farmF.PNG" id="17_y5fxa"]
 [ext_resource type="PackedScene" uid="uid://dii3g1b6u1ao5" path="res://assets/env/door.tscn" id="18_guunr"]
 [ext_resource type="PackedScene" uid="uid://c8owvlnwcik72" path="res://assets/objects/crate.tscn" id="21_5baw6"]
+[ext_resource type="PackedScene" uid="uid://c5sgqa1v6ibms" path="res://assets/objects/planter.tscn" id="22_k0ofh"]
+[ext_resource type="PackedScene" uid="uid://deslvvcjhb3ss" path="res://assets/objects/compB.tscn" id="23_gdply"]
+[ext_resource type="PackedScene" uid="uid://bsl1pjsnvoffg" path="res://assets/objects/compDL.tscn" id="24_fdd7h"]
+[ext_resource type="PackedScene" uid="uid://dk3j4rykmswqt" path="res://assets/objects/compSide.tscn" id="25_c4ryg"]
+[ext_resource type="PackedScene" uid="uid://cnv128hxdrye4" path="res://assets/objects/compDR.tscn" id="26_62of8"]
+[ext_resource type="PackedScene" uid="uid://bnp0gjpgvssms" path="res://assets/objects/compF.tscn" id="27_008h2"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_rr25g"]
 a = Vector2(60, -332)
@@ -267,14 +273,16 @@ region_enabled = true
 region_rect = Rect2(1679.76, 1370.51, 511.397, 178.834)
 
 [node name="EngRf" type="Sprite2D" parent="ySort"]
-position = Vector2(20, 547)
+position = Vector2(20, 737)
 texture = ExtResource("16_k6c0k")
+offset = Vector2(0, -190.155)
 region_enabled = true
 region_rect = Rect2(1676.96, 1395.19, 516.46, 445.573)
 
 [node name="FarmF" type="Sprite2D" parent="ySort"]
-position = Vector2(-1244, 164)
+position = Vector2(-1244, 421)
 texture = ExtResource("17_y5fxa")
+offset = Vector2(0, -254.87)
 region_enabled = true
 region_rect = Rect2(352.898, 967.34, 632.917, 544.308)
 
@@ -347,23 +355,130 @@ position = Vector2(1506, -231)
 type = 1
 
 [node name="cryoMachine10" parent="ySort" instance=ExtResource("3_fgpbo")]
-position = Vector2(1498, 219)
+position = Vector2(1498, 231)
 type = 3
 
 [node name="crate" parent="ySort" instance=ExtResource("21_5baw6")]
 position = Vector2(256, -122)
 
+[node name="crate7" parent="ySort" instance=ExtResource("21_5baw6")]
+position = Vector2(364, -121)
+
+[node name="crate9" parent="ySort" instance=ExtResource("21_5baw6")]
+position = Vector2(275, -80)
+
 [node name="crate2" parent="ySort" instance=ExtResource("21_5baw6")]
 position = Vector2(-137, -142)
 
+[node name="crate11" parent="ySort" instance=ExtResource("21_5baw6")]
+position = Vector2(-50, -110)
+
 [node name="crate3" parent="ySort" instance=ExtResource("21_5baw6")]
-position = Vector2(-128, 178)
+position = Vector2(-120, 162)
+
+[node name="crate12" parent="ySort" instance=ExtResource("21_5baw6")]
+position = Vector2(-207, 140)
 
 [node name="crate4" parent="ySort" instance=ExtResource("21_5baw6")]
-position = Vector2(617, 142)
+position = Vector2(613, 132)
+
+[node name="crate13" parent="ySort" instance=ExtResource("21_5baw6")]
+position = Vector2(705, 152)
 
 [node name="crate5" parent="ySort" instance=ExtResource("21_5baw6")]
 position = Vector2(625, -97)
 
+[node name="crate14" parent="ySort" instance=ExtResource("21_5baw6")]
+position = Vector2(714, -78)
+
 [node name="crate6" parent="ySort" instance=ExtResource("21_5baw6")]
 position = Vector2(248, 183)
+
+[node name="crate10" parent="ySort" instance=ExtResource("21_5baw6")]
+position = Vector2(339, 135)
+
+[node name="crate8" parent="ySort" instance=ExtResource("21_5baw6")]
+position = Vector2(348, 197)
+
+[node name="planter" parent="ySort" instance=ExtResource("22_k0ofh")]
+position = Vector2(-1453, -212)
+horizontal = false
+
+[node name="planter2" parent="ySort" instance=ExtResource("22_k0ofh")]
+position = Vector2(-1484, -13)
+horizontal = false
+
+[node name="planter3" parent="ySort" instance=ExtResource("22_k0ofh")]
+position = Vector2(-1449, 181)
+horizontal = false
+
+[node name="planter4" parent="ySort" instance=ExtResource("22_k0ofh")]
+position = Vector2(-1307, -293)
+
+[node name="planter5" parent="ySort" instance=ExtResource("22_k0ofh")]
+position = Vector2(-1088, -295)
+
+[node name="planter6" parent="ySort" instance=ExtResource("22_k0ofh")]
+position = Vector2(-1311, 306)
+
+[node name="planter7" parent="ySort" instance=ExtResource("22_k0ofh")]
+position = Vector2(-1095, 304)
+
+[node name="planter8" parent="ySort" instance=ExtResource("22_k0ofh")]
+position = Vector2(-1212, -204)
+horizontal = false
+
+[node name="planter9" parent="ySort" instance=ExtResource("22_k0ofh")]
+position = Vector2(-1214, -26)
+horizontal = false
+
+[node name="planter10" parent="ySort" instance=ExtResource("22_k0ofh")]
+position = Vector2(-1215, 137)
+horizontal = false
+
+[node name="compB" parent="ySort" instance=ExtResource("23_gdply")]
+position = Vector2(1621, 197)
+
+[node name="compDL" parent="ySort" instance=ExtResource("24_fdd7h")]
+position = Vector2(1708, 138)
+
+[node name="compSide" parent="ySort" instance=ExtResource("25_c4ryg")]
+position = Vector2(1752, -18)
+
+[node name="compF" parent="ySort" instance=ExtResource("27_008h2")]
+position = Vector2(1609, -136)
+
+[node name="compDR" parent="ySort" instance=ExtResource("26_62of8")]
+position = Vector2(1721, -90)
+
+[node name="compDR2" parent="ySort" instance=ExtResource("26_62of8")]
+position = Vector2(1324, -307)
+
+[node name="compF2" parent="ySort" instance=ExtResource("27_008h2")]
+position = Vector2(1204, -344)
+
+[node name="compDL2" parent="ySort" instance=ExtResource("24_fdd7h")]
+position = Vector2(1088, -307)
+
+[node name="compB2" parent="ySort" instance=ExtResource("23_gdply")]
+position = Vector2(1192, 394)
+
+[node name="compDR3" parent="ySort" instance=ExtResource("26_62of8")]
+position = Vector2(1094, 355)
+
+[node name="compDL3" parent="ySort" instance=ExtResource("24_fdd7h")]
+position = Vector2(1291, 355)
+
+[node name="compDL4" parent="ySort" instance=ExtResource("24_fdd7h")]
+position = Vector2(-123, -439)
+
+[node name="compDR4" parent="ySort" instance=ExtResource("26_62of8")]
+position = Vector2(-96, 501)
+
+[node name="compSide2" parent="ySort" instance=ExtResource("25_c4ryg")]
+position = Vector2(-63, -580)
+right = true
+
+[node name="compSide3" parent="ySort" instance=ExtResource("25_c4ryg")]
+position = Vector2(-61, 560)
+right = true

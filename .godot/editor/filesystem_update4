@@ -16,3 +16,7 @@ res://assets/objects/compDL.tscn
 res://assets/objects/compDR.tscn
 res://assets/objects/compSide.tscn
 res://scripts/compSide.gd
+res://scripts/vDoor.gd
+res://assets/env/vDoor.tscn
+res://assets/UI/hud.tscn
+res://scripts/hud.gd

@@ -11,12 +11,13 @@ var resources = {
 				"oxygen":100.0,
 				"hunger":100.0,
 				"alignment":100.0,
-				"qCond":false
+				"qCond":false,
+				"hull":100.0,
 				}
 
 var questline = {"START": {"started": false, "nextQuest": "CHECK_LOGS", "requirements": {"qCond":true}},
 				 "CHECK_LOGS": {"started": false, "nextQuest": "ANALYZE_HULL", "requirements": {"qCond":true}},
-				 "ANALYZE_HULL": {"started": false, "nextQuest": "FIX_HULL", "requirements": {"qCond":true}},
+				 "ANALYZE_HULL": {"started": false, "nextQuest": "FIX_HULL", "requirements": {"qCond":true, "hull":100}},
 				 "FIX_HULL": {"started": false, "nextQuest": "REPAIR_1", "requirements": {"qCond":true}},
 				 "REPAIR_1": {"started": false, "nextQuest": "AST_1", "requirements": {"qCond":true, "alignment":100.0, "metals":5}},
 				 "AST_1": {"started": false, "nextQuest": "REPAIR_2", "requirements": {"qCond":true, "alignment":0, "metals":30}},

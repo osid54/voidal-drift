@@ -1,0 +1,47 @@
+[gd_scene load_steps=2 format=3 uid="uid://b0057c5sigyeh"]
+
+[ext_resource type="Script" path="res://scripts/hud.gd" id="1_825ao"]
+
+[node name="HUD" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_825ao")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+offset_left = 36.0
+offset_top = 36.0
+offset_right = 215.0
+offset_bottom = 116.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -88.0
+offset_top = -38.5
+offset_right = 88.0
+offset_bottom = 38.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="hull" type="Label" parent="Panel/VBoxContainer"]
+layout_mode = 2
+text = "hull integrity: 100%"
+horizontal_alignment = 1
+uppercase = true
+
+[node name="align" type="Label" parent="Panel/VBoxContainer"]
+layout_mode = 2
+text = "alignment: 100%"
+horizontal_alignment = 1
+uppercase = true
+
+[node name="oxy" type="Label" parent="Panel/VBoxContainer"]
+layout_mode = 2
+text = "oxygen level: 100%"
+horizontal_alignment = 1
+uppercase = true

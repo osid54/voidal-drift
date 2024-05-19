@@ -1,0 +1,94 @@
+[gd_scene load_steps=10 format=3 uid="uid://duy5cop7gu6mt"]
+
+[ext_resource type="Script" path="res://scripts/vDoor.gd" id="1_6ep2w"]
+[ext_resource type="Texture2D" uid="uid://dv74iqd5gc2yr" path="res://src/sprites/voidSheet.png" id="2_e5tah"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lreiy"]
+radius = 108.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tb20u"]
+atlas = ExtResource("2_e5tah")
+region = Rect2(648, 180, 72, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i3pgn"]
+atlas = ExtResource("2_e5tah")
+region = Rect2(576, 180, 72, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ta782"]
+atlas = ExtResource("2_e5tah")
+region = Rect2(504, 180, 72, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fnx68"]
+atlas = ExtResource("2_e5tah")
+region = Rect2(432, 180, 72, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r54sd"]
+atlas = ExtResource("2_e5tah")
+region = Rect2(360, 180, 72, 144)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sbntb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tb20u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i3pgn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ta782")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fnx68")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r54sd")
+}],
+"loop": false,
+"name": &"close",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r54sd")
+}],
+"loop": false,
+"name": &"default",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fnx68")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ta782")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i3pgn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tb20u")
+}],
+"loop": false,
+"name": &"open",
+"speed": 8.0
+}]
+
+[node name="vDoor" type="Node2D"]
+script = ExtResource("1_6ep2w")
+
+[node name="open" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="open"]
+y_sort_enabled = true
+shape = SubResource("CircleShape2D_lreiy")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+y_sort_enabled = true
+sprite_frames = SubResource("SpriteFrames_sbntb")
+autoplay = "default"
+
+[connection signal="body_entered" from="open" to="." method="doorOpen"]
+[connection signal="body_exited" from="open" to="." method="doorClose"]

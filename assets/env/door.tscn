@@ -74,9 +74,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_cnqx6")
 }],
-"loop": true,
+"loop": false,
 "name": &"default",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -132,7 +132,6 @@ shape = SubResource("CircleShape2D_1w0nl")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 y_sort_enabled = true
 sprite_frames = SubResource("SpriteFrames_3ls3p")
-animation = &"close"
 autoplay = "default"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

@@ -1,7 +1,8 @@
 res://scripts
+res://assets/UI
+res://assets/env
+res://src/sprites
 res://assets/objects
 res://assets
-res://src/sprites
-res://assets/env
 res://shaders
 res://scenes

@@ -1,5 +1,6 @@
-[gd_scene load_steps=44 format=3 uid="uid://c6so4o2w5ij8"]
+[gd_scene load_steps=46 format=3 uid="uid://c6so4o2w5ij8"]
 
+[ext_resource type="PackedScene" uid="uid://b0057c5sigyeh" path="res://assets/UI/hud.tscn" id="1_df12q"]
 [ext_resource type="Texture2D" uid="uid://ca3icj3ojap1h" path="res://src/sprites/ship/floor.PNG" id="1_v6o1k"]
 [ext_resource type="Texture2D" uid="uid://0ql0y1kll4ve" path="res://src/sprites/ship/wallB.PNG" id="2_knc4f"]
 [ext_resource type="PackedScene" uid="uid://dx70uo64ddhj5" path="res://assets/characters/player.tscn" id="2_pcajm"]
@@ -27,6 +28,7 @@
 [ext_resource type="PackedScene" uid="uid://dk3j4rykmswqt" path="res://assets/objects/compSide.tscn" id="25_c4ryg"]
 [ext_resource type="PackedScene" uid="uid://cnv128hxdrye4" path="res://assets/objects/compDR.tscn" id="26_62of8"]
 [ext_resource type="PackedScene" uid="uid://bnp0gjpgvssms" path="res://assets/objects/compF.tscn" id="27_008h2"]
+[ext_resource type="PackedScene" uid="uid://duy5cop7gu6mt" path="res://assets/env/vDoor.tscn" id="28_oscdi"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_rr25g"]
 a = Vector2(60, -332)
@@ -54,10 +56,10 @@ b = Vector2(1450, -233)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_ag04k"]
 a = Vector2(1443, 334)
-b = Vector2(1445, 58)
+b = Vector2(1445, 62)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_g1nlu"]
-a = Vector2(1446, -18)
+a = Vector2(1446, -77)
 b = Vector2(1452, -234)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_2tn8m"]
@@ -92,7 +94,22 @@ b = Vector2(244, -499)
 a = Vector2(245, 595)
 b = Vector2(242, 422)
 
-[node name="Node2D" type="Node2D"]
+[node name="main" type="Node2D"]
+
+[node name="ui" type="CanvasLayer" parent="."]
+
+[node name="HUD" parent="ui" instance=ExtResource("1_df12q")]
+
+[node name="bg" type="CanvasLayer" parent="."]
+layer = -100
+
+[node name="ColorRect" type="ColorRect" parent="bg"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
 
 [node name="Floor" type="Sprite2D" parent="."]
 z_index = -3
@@ -108,7 +125,6 @@ region_enabled = true
 region_rect = Rect2(347.135, 293.927, 3421.55, 1412.67)
 
 [node name="walls" type="StaticBody2D" parent="."]
-visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="walls"]
 position = Vector2(945, -303)
@@ -171,10 +187,10 @@ shape = SubResource("SegmentShape2D_tqd7c")
 shape = SubResource("SegmentShape2D_0bdec")
 
 [node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="walls"]
-polygon = PackedVector2Array(-967, 274, -1000, 210, -1017, 139, -1025, 47, -1042, 47, -1038, 148, -1011, 285, -969, 399)
+polygon = PackedVector2Array(-967, 274, -990, 220, -1008, 149, -1018, 68, -1034, 67, -1028, 205, -1011, 285, -969, 399)
 
 [node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="walls"]
-polygon = PackedVector2Array(-975, -378, -972, -268, -1011, -144, -1022, -50, -1040, -49, -1035, -163, -1023, -258)
+polygon = PackedVector2Array(-975, -378, -972, -268, -999, -173, -1013, -69, -1034, -70, -1027, -160, -1018, -251)
 
 [node name="CollisionShape2D11" type="CollisionShape2D" parent="walls"]
 shape = SubResource("SegmentShape2D_npfmk")
@@ -186,6 +202,7 @@ shape = SubResource("SegmentShape2D_dsugd")
 y_sort_enabled = true
 
 [node name="player" parent="ySort" instance=ExtResource("2_pcajm")]
+position = Vector2(1508, -170)
 
 [node name="Camera2D" type="Camera2D" parent="ySort/player"]
 position_smoothing_enabled = true
@@ -217,8 +234,9 @@ region_enabled = true
 region_rect = Rect2(3317.48, 1005.95, 467.093, 444.307)
 
 [node name="CommRf" type="Sprite2D" parent="ySort"]
-position = Vector2(1148, 332)
+position = Vector2(1148, 452)
 texture = ExtResource("7_ctejg")
+offset = Vector2(0, -120.525)
 region_enabled = true
 region_rect = Rect2(2721.27, 1237.6, 687.348, 345.573)
 
@@ -230,8 +248,9 @@ region_enabled = true
 region_rect = Rect2(2117.47, 1252.79, 672.157, 288.61)
 
 [node name="BedF" type="Sprite2D" parent="ySort"]
-position = Vector2(603, 429)
+position = Vector2(603, 581)
 texture = ExtResource("9_8t87c")
+offset = Vector2(0, -153.775)
 region_enabled = true
 region_rect = Rect2(2113.67, 1317.34, 812.665, 383.547)
 
@@ -242,13 +261,13 @@ region_enabled = true
 region_rect = Rect2(1654.18, 588.224, 554.435, 220.255)
 
 [node name="FarmDb" type="Sprite2D" parent="ySort"]
-position = Vector2(-999, -153)
+position = Vector2(-993, -157)
 texture = ExtResource("11_uovpu")
 region_enabled = true
 region_rect = Rect2(869.358, 681.262, 108.862, 478.485)
 
 [node name="FarmDf" type="Sprite2D" parent="ySort"]
-position = Vector2(-1005, 159)
+position = Vector2(-997, 175)
 texture = ExtResource("12_wrb82")
 region_enabled = true
 region_rect = Rect2(859.231, 1012.91, 121.52, 475.953)
@@ -273,7 +292,7 @@ region_enabled = true
 region_rect = Rect2(1679.76, 1370.51, 511.397, 178.834)
 
 [node name="EngRf" type="Sprite2D" parent="ySort"]
-position = Vector2(20, 737)
+position = Vector2(17, 731)
 texture = ExtResource("16_k6c0k")
 offset = Vector2(0, -190.155)
 region_enabled = true
@@ -403,6 +422,7 @@ position = Vector2(348, 197)
 [node name="planter" parent="ySort" instance=ExtResource("22_k0ofh")]
 position = Vector2(-1453, -212)
 horizontal = false
+broken = true
 
 [node name="planter2" parent="ySort" instance=ExtResource("22_k0ofh")]
 position = Vector2(-1484, -13)
@@ -414,9 +434,11 @@ horizontal = false
 
 [node name="planter4" parent="ySort" instance=ExtResource("22_k0ofh")]
 position = Vector2(-1307, -293)
+broken = true
 
 [node name="planter5" parent="ySort" instance=ExtResource("22_k0ofh")]
 position = Vector2(-1088, -295)
+broken = true
 
 [node name="planter6" parent="ySort" instance=ExtResource("22_k0ofh")]
 position = Vector2(-1311, 306)
@@ -427,10 +449,12 @@ position = Vector2(-1095, 304)
 [node name="planter8" parent="ySort" instance=ExtResource("22_k0ofh")]
 position = Vector2(-1212, -204)
 horizontal = false
+broken = true
 
 [node name="planter9" parent="ySort" instance=ExtResource("22_k0ofh")]
 position = Vector2(-1214, -26)
 horizontal = false
+broken = true
 
 [node name="planter10" parent="ySort" instance=ExtResource("22_k0ofh")]
 position = Vector2(-1215, 137)
@@ -482,3 +506,9 @@ right = true
 [node name="compSide3" parent="ySort" instance=ExtResource("25_c4ryg")]
 position = Vector2(-61, 560)
 right = true
+
+[node name="vDoor" parent="." instance=ExtResource("28_oscdi")]
+position = Vector2(-1024, -3)
+
+[node name="vDoor2" parent="." instance=ExtResource("28_oscdi")]
+position = Vector2(1446, -8)

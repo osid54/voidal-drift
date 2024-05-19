@@ -27,3 +27,9 @@ func _physics_process(_delta):
 		velocity = velocity.move_toward(Vector2(), friction)
 
 	move_and_slide()
+
+func _process(_delta):
+	if Input.is_action_just_pressed("interact"):
+		var interactions = $interactBox.get_overlapping_areas() + $interactBox.get_overlapping_bodies()
+		if len(interactions) > 0:
+			interactions[0].interact()

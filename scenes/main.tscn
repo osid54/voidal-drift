@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://c6so4o2w5ij8"]
+[gd_scene load_steps=52 format=3 uid="uid://c6so4o2w5ij8"]
 
 [ext_resource type="PackedScene" uid="uid://b0057c5sigyeh" path="res://assets/UI/hud.tscn" id="1_df12q"]
 [ext_resource type="Texture2D" uid="uid://ca3icj3ojap1h" path="res://src/sprites/ship/floor.PNG" id="1_v6o1k"]
@@ -29,6 +29,12 @@
 [ext_resource type="PackedScene" uid="uid://cnv128hxdrye4" path="res://assets/objects/compDR.tscn" id="26_62of8"]
 [ext_resource type="PackedScene" uid="uid://bnp0gjpgvssms" path="res://assets/objects/compF.tscn" id="27_008h2"]
 [ext_resource type="PackedScene" uid="uid://duy5cop7gu6mt" path="res://assets/env/vDoor.tscn" id="28_oscdi"]
+[ext_resource type="PackedScene" uid="uid://chn1robr1x10s" path="res://assets/questAreas/droneComp.tscn" id="30_6r14p"]
+[ext_resource type="PackedScene" uid="uid://civqrwxko7r5w" path="res://assets/questAreas/farm.tscn" id="31_6febb"]
+[ext_resource type="PackedScene" uid="uid://bv77euwnjmjq6" path="res://assets/questAreas/mainCPU.tscn" id="32_hvuny"]
+[ext_resource type="PackedScene" uid="uid://u4ndwmtainv3" path="res://assets/questAreas/storageBay.tscn" id="33_ebxoi"]
+[ext_resource type="PackedScene" uid="uid://cn8fumexo4rki" path="res://assets/questAreas/cryo.tscn" id="34_dm0r5"]
+[ext_resource type="PackedScene" uid="uid://bpnseefreq0ce" path="res://assets/characters/drone.tscn" id="35_cfjya"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_rr25g"]
 a = Vector2(60, -332)
@@ -125,6 +131,7 @@ region_enabled = true
 region_rect = Rect2(347.135, 293.927, 3421.55, 1412.67)
 
 [node name="walls" type="StaticBody2D" parent="."]
+visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="walls"]
 position = Vector2(945, -303)
@@ -512,3 +519,30 @@ position = Vector2(-1024, -3)
 
 [node name="vDoor2" parent="." instance=ExtResource("28_oscdi")]
 position = Vector2(1446, -8)
+
+[node name="droneComp" parent="." node_paths=PackedStringArray("drone") instance=ExtResource("30_6r14p")]
+position = Vector2(103, -521)
+left = true
+drone = NodePath("../drone2")
+
+[node name="droneComp2" parent="." node_paths=PackedStringArray("drone") instance=ExtResource("30_6r14p")]
+position = Vector2(98, 608)
+drone = NodePath("../drone")
+
+[node name="farm" parent="." instance=ExtResource("31_6febb")]
+position = Vector2(-1266, -140)
+
+[node name="mainCPU" parent="." instance=ExtResource("32_hvuny")]
+position = Vector2(1680, 27)
+
+[node name="storageBay" parent="." instance=ExtResource("33_ebxoi")]
+position = Vector2(-631, 2)
+
+[node name="cryo" parent="." instance=ExtResource("34_dm0r5")]
+position = Vector2(1506, -180)
+
+[node name="drone" parent="." instance=ExtResource("35_cfjya")]
+position = Vector2(196, 583)
+
+[node name="drone2" parent="." instance=ExtResource("35_cfjya")]
+position = Vector2(199, -599)

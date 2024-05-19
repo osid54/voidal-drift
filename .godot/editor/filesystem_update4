@@ -20,3 +20,17 @@ res://scripts/vDoor.gd
 res://assets/env/vDoor.tscn
 res://assets/UI/hud.tscn
 res://scripts/hud.gd
+res://scripts/questArea/mainCPU.gd
+res://assets/questAreas/mainCPU.tscn
+res://scripts/farm.gd
+res://scripts/player.gd
+res://assets/questAreas/farm.tscn
+res://scripts/questArea/storageBay.gd
+res://scripts/questArea/droneR.gd
+res://scripts/questArea/cryo.gd
+res://scripts/drone.gd
+res://assets/characters/drone.tscn
+res://assets/questAreas/droneComp.tscn
+res://assets/questAreas/cryo.tscn
+res://assets/questAreas/storageBay.tscn
+res://scripts/questArea/droneComp.gd

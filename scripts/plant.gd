@@ -13,14 +13,12 @@ var oxy := false
 
 func _ready():
 	await get_tree().create_timer(randf_range(0,2)).timeout
-	stage = 1
-	$anim.play(anims[stage])
+	#stage = 1
+	startAnim()
 	$Timer.start()
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta):
-	pass
-
+func startAnim():
+	$anim.play(anims[stage])
 
 func timeOut():
 	if stage == 0:
@@ -28,13 +26,13 @@ func timeOut():
 	else:
 		if stage != 5:
 			stage+=1
-			$anim.play(anims[stage])
+			startAnim()
 			if stage == 4:
 				position.y -= 18
 		else:
 			if !oxy:
 				oxy = true
 				$bubbles.emitting = true
-				$anim.play(anims[stage])
+				startAnim()
 			Autoload.resources["oxygen"] = clampf(Autoload.resources["oxygen"]+.1,0,100)
 			print(str(Autoload.resources["oxygen"]))

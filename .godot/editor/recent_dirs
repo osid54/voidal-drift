@@ -1,7 +1,10 @@
+res://assets/characters
+res://src/sprites
 res://scripts
+res://assets/questAreas
+res://scripts/questArea
 res://assets/UI
 res://assets/env
-res://src/sprites
 res://assets/objects
 res://assets
 res://shaders

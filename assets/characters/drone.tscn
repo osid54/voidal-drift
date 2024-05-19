@@ -1,0 +1,51 @@
+[gd_scene load_steps=9 format=3 uid="uid://bpnseefreq0ce"]
+
+[ext_resource type="Script" path="res://scripts/drone.gd" id="1_yjg63"]
+[ext_resource type="Texture2D" uid="uid://b6va4lrlrskel" path="res://src/sprites/dude.png" id="2_ohnr8"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_cndrn"]
+size = Vector2(72, 72)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ypxg"]
+atlas = ExtResource("2_ohnr8")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p8d70"]
+atlas = ExtResource("2_ohnr8")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ohdyx"]
+atlas = ExtResource("2_ohnr8")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lixwj"]
+atlas = ExtResource("2_ohnr8")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ferg5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0ypxg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p8d70")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ohdyx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lixwj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="drone" type="Sprite2D"]
+texture = SubResource("PlaceholderTexture2D_cndrn")
+script = ExtResource("1_yjg63")
+
+[node name="bot" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ferg5")
+autoplay = "default"

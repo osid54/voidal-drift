@@ -11,6 +11,8 @@ size = Vector2(142, 20)
 size = Vector2(52, 110)
 
 [node name="planter" type="StaticBody2D"]
+collision_layer = 3
+collision_mask = 0
 script = ExtResource("1_3v3tr")
 
 [node name="box" type="Sprite2D" parent="."]
